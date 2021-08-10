@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Exercício 1 - Cadastro de Pessoa";
+}
+<h1 class="text-center">@ViewData["Title"] </h1>
+
+<form asp-controller="Home" asp-action="Exercicio1" asp-antiforgery="true" method="POST">
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nome" name="nome">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Sobrenome" name="sobrenome">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col">
+            <input type="datetime-local" value="1990/01/01" class="form-control" placeholder="Data de Nascimento"
+                name="nascimento">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nome de Usuario" name="usuario">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col">
+            <input type="password" class="form-control" placeholder="Senha" name="senha">
+        </div>
+        <div class="col">
+            <input type="password" class="form-control" placeholder="Confirme sua Senha" name="confirma">
+        </div>
+        <div class="col">
+            <input type="submit" class="btn btn-primary" value="Enviar">
+        </div>
+    </div>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sobrenome</th>
+            <th scope="col">Nascimento</th>
+            <th scope="col">Usuário</th>
+            <th scope="col">Senha</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row"> @TempData["nome"] </th>
+            <td> @TempData["sobrenome"] </td>
+            <td> @TempData["nascimento"] </td>
+            <td> @TempData["usuario"] </td>
+            <td> @TempData["senha"] </td>
+        </tr>
+    </tbody>
+</table>

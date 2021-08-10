@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Cadastro de Exportação";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Cadastro" asp-controller="Exportacao" asp-antiforgery="true" method="POST">
+    <div class="form-group">
+        <label for="registro">Número do registro</label>
+        <input type="number" class="form-control" id="registro" name="registro">
+    </div>
+    <div class="form-group">
+        <label for="volume">Volume</label>
+        <input type="number" class="form-control" id="volume" name="volume">
+    </div>
+    <div class="form-group">
+        <label for="valor">Valor</label>
+        <input type="number" class="form-control" id="valor" name="valor">
+    </div>
+    <div class="form-group">
+        <label for="data">Data</label>
+        <input class="form-control" type="datetime-local" value="2011-08-19" id="data" name="data">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Enviar">
+</form>

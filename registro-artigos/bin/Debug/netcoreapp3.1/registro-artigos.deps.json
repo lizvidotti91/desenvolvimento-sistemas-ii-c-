@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "registro-artigos/1.0.0": {
+        "runtime": {
+          "registro-artigos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "registro-artigos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

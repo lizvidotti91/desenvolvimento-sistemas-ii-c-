@@ -1,0 +1,42 @@
+@model moveis_planejados.Models.Venda
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Venda</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd class="col-sm-10">
+            R$ @Html.DisplayFor(model => model.Valor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StatusVenda)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StatusVenda)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movel.MovelId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.FuncionarioId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-secondary" asp-action="Index">Voltar</a>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.VendaId">Editar</a>
+</div>

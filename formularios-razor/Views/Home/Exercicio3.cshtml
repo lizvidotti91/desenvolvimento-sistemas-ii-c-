@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Exercício 3 - Sorteio de Equipes e Temas de Trabalho";
+}
+<h1 class="text-center">@ViewData["Title"] </h1>
+
+<form asp-controller="Home" asp-action="Exercicio3" asp-antiforgery="true" method="POST">
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="nome da equipe" name="equipe1">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="nome da equipe" name="equipe2">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="nome da equipe" name="equipe3">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="tema" name="tema1">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="tema" name="tema2">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="tema" name="tema3">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col">
+            <input type="submit" class="btn btn-primary" value="Enviar">
+        </div>
+    </div>
+</form>
+
+<p>@TempData["sorteio"]</p>

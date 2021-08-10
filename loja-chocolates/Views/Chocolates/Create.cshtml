@@ -1,0 +1,64 @@
+@model loja_chocolates.Models.Chocolate
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Novo Cadastro</h1>
+
+<h4>Chocolate</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col form-group">
+                    <label asp-for="Marca" class="control-label"></label>
+                    <input asp-for="Marca" class="form-control" />
+                    <span asp-validation-for="Marca" class="text-danger"></span>
+                </div>
+                <div class="col form-group">
+                    <label asp-for="PorcentagemCacau" class="control-label"></label>
+                    <input asp-for="PorcentagemCacau" class="form-control" />
+                    <span asp-validation-for="PorcentagemCacau" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col form-group">
+                    <label asp-for="Tipo" class="control-label"></label>
+                    <input asp-for="Tipo" class="form-control" />
+                    <span asp-validation-for="Tipo" class="text-danger"></span>
+                </div>
+                <div class="col form-group">
+                    <label asp-for="DataValidade" class="control-label"></label>
+                    <input asp-for="DataValidade" class="form-control" />
+                    <span asp-validation-for="DataValidade" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col form-group">
+                    <label asp-for="Preco" class="control-label"></label>
+                    <input asp-for="Preco" class="form-control" />
+                    <span asp-validation-for="Preco" class="text-danger"></span>
+                </div>
+                <div class="col form-group">
+                    <label name="Desconto" class="control-label">Desconto</label>
+                    <select name="Desconto" class="form-control">
+                        <option value="0">Selecione um cupom de desconto</option>
+                        <option value="5">R$ 5,00</option>
+                        <option value="10">R$ 10,00</option>
+                        <option value="15">R$ 15,00</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Exercício 2 - Classificando Maiores e Menores de Idade";
+}
+<h1 class="text-center">@ViewData["Title"] </h1>
+
+<form asp-controller="Home" asp-action="Exercicio2" asp-antiforgery="true" method="POST">
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nome" name="nome1">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Idade" name="idade1">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nome" name="nome2">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Idade" name="idade2">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nome" name="nome3">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Idade" name="idade3">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nome" name="nome4">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Idade" name="idade4">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nome" name="nome5">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Idade" name="idade5">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col">
+            <input type="submit" class="btn btn-primary" value="Enviar">
+        </div>
+    </div>
+</form>
+
+<p>@TempData["maiores"]</p>
+<p>@TempData["menores"]</p>

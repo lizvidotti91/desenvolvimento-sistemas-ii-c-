@@ -1,0 +1,53 @@
+@model loja_chocolates.Models.Chocolate
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <h4 class="card-header">Chocolate</h4>
+            <dl class="card-body">
+                <dt class="card-text">
+                    @Html.DisplayNameFor(model => model.Marca)
+                </dt>
+                <dd class="card-text">
+                    @Html.DisplayFor(model => model.Marca)
+                </dd>
+                <dt class="card-text">
+                    @Html.DisplayNameFor(model => model.PorcentagemCacau)
+                </dt>
+                <dd class="card-text">
+                    @Html.DisplayFor(model => model.PorcentagemCacau)
+                </dd>
+                <dt class="card-text">
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </dt>
+                <dd class="card-text">
+                    @Html.DisplayFor(model => model.Tipo)
+                </dd>
+                <dt class="card-text">
+                    @Html.DisplayNameFor(model => model.DataValidade)
+                </dt>
+                <dd class="card-text">
+                    @Html.DisplayFor(model => model.DataValidade)
+                </dd>
+                <dt class="card-text">
+                    @Html.DisplayNameFor(model => model.Preco)
+                </dt>
+                <dd class="card-text">
+                    @Html.DisplayFor(model => model.Preco)
+                </dd>
+            </dl>
+
+            <div class="card-footer">
+                <a asp-action="Edit" asp-route-id="@Model.ChocolateId" class="btn btn-info">Edit</a>
+                <a asp-action="Index" class="btn btn-info">Back to List</a>
+            </div>
+        </div>
+
+    </div>
+</div>

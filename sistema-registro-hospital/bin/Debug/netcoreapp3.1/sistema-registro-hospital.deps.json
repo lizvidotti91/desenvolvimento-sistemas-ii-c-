@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "sistema-registro-hospital/1.0.0": {
+        "runtime": {
+          "sistema-registro-hospital.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "sistema-registro-hospital/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
